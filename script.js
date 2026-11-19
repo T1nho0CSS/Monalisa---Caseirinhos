@@ -1,5 +1,5 @@
 // ===== TROQUE AQUI: número com código do país + DDD, só dígitos (ex.: 5518999999999)
-const WHATS = "5518997791322";
+const WHATS = "5518988105115";
 
 // Se os emojis ainda aparecerem como � no WhatsApp, troque true por false
 const USAR_EMOJIS = true;
