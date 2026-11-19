@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monalisa Melo Caseirinhos | Biscoitinhos amanteigados personalizados</title>
+<meta name="description" content="Biscoitinhos amanteigados feitos à mão, com o seu nome, a sua logo e o laço da sua festa. Peça pelo WhatsApp.">
+<meta name="theme-color" content="#F8E7E4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍪</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Desenhos reutilizáveis: o laço usa a cor atual (currentColor) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="bow" fill="currentColor">
+      <path d="M100 40C68 4 36 28 60 48c15 11 34 2 40-8z"/>
+      <path d="M100 40c32-36 64-12 40 8-15 11-34 2-40-8z"/>
+      <path d="M95 50 76 92l16-6 8 14z"/><path d="M105 50l19 42-16-6-8 14z"/>
+      <circle cx="100" cy="43" r="10"/>
+      <path d="M100 43c-14-14-24-8-30-1M100 43c14-14 24-8 30-1" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <symbol id="cookie" viewBox="0 0 200 200">
+      <circle cx="100" cy="112" r="78" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
+      <circle cx="100" cy="112" r="63" fill="none" stroke="#E2C48C" stroke-width="1.6" stroke-dasharray="3 6"/>
+      <text x="100" y="134" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-style="italic" font-size="62" fill="#C9A265">MM</text>
+      <use href="#bow"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 200 200">
+      <path d="M100 182C18 124 12 62 54 48c26-8 46 10 46 26 0-16 20-34 46-26 42 14 36 76-46 134z" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
+      <text x="100" y="124" text-anchor="middle" font-family="Instrument Serif,Georgia,serif" font-style="italic" font-size="46" fill="#C9A265">Pai</text>
+      <use href="#bow" transform="translate(0 10) scale(.9)"/>
+    </symbol>
+    <symbol id="jar" viewBox="0 0 200 200">
+      <rect x="38" y="74" width="124" height="102" rx="16" fill="#fff" fill-opacity=".6" stroke="#D9C7A6" stroke-width="3"/>
+      <rect x="32" y="62" width="136" height="20" rx="8" fill="#D8B26A"/>
+      <circle cx="78" cy="144" r="26" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
+      <circle cx="124" cy="144" r="26" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
+      <circle cx="100" cy="116" r="24" fill="#F3DFB6" stroke="#E2C48C" stroke-width="3"/>
+      <use href="#bow" transform="translate(0 22)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#topo" aria-label="Monalisa Melo Caseirinhos">Monalisa Melo<small>caseirinhos</small></a>
+    <nav aria-label="Principal">
+      <a href="#produtos">O que fazemos</a>
+      <a href="#como">Como pedir</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn" href="#pedido">Fazer pedido</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Biscoitinhos amanteigados com o seu nome, a sua marca e o laço da sua festa.</h1>
+        <p class="lead">Feitos à mão, um por um, para casamentos, chás de bebê, aniversários e presentes que a pessoa guarda mesmo depois de comer.</p>
+        <div class="cta">
+          <a class="btn" href="#pedido">Pedir um orçamento</a>
+          <a class="btn ghost" href="#produtos">Ver o que fazemos</a>
+        </div>
+      </div>
+      <div class="stage">
+        <svg class="cookie-big" id="heroCookie" viewBox="0 0 200 200" role="img" aria-label="Biscoito amanteigado com laço"><use href="#cookie"/></svg>
+        <div class="picker">
+          <p>Toque para escolher a cor do laço: <b id="ribName">Rosa</b></p>
+          <div class="sw" id="sw" role="group" aria-label="Cor do laço"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <p>Casamento, chá de bebê, aniversário, Dia dos Pais, noivado e formatura: cada pedido sai <em>com a cara de quem recebe.</em></p>
+  </div>
+
+  <section id="produtos">
+    <div class="wrap">
+      <div class="head">
+        <h2>O que sai do nosso forno</h2>
+        <p>Todo biscoito pode levar o seu nome, uma frase ou a sua logo gravada na massa.</p>
+      </div>
+
+      <!-- Para usar suas fotos: coloque o caminho em data-photo (ex.: data-photo="img/foto1.jpg") -->
+      <div>
+        <article class="row">
+          <div class="media" data-photo="" data-alt="Biscoitos com logo gravada" style="--bg:#F8E7E4;--r:#B8893C"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#cookie"/></svg></div>
+          <div><h3>Biscoito com a sua marca</h3><p>Nome, logo ou frase gravados na massa. Ótimo para casamentos, eventos e lojas que querem presentear clientes.</p></div>
+          <a class="btn ghost pick" href="#pedido" data-kind="Biscoito com marca">Pedir este</a>
+        </article>
+        <article class="row">
+          <div class="media" data-photo="" data-alt="Biscoitos em saquinho com laço" style="--bg:#E4EAF8;--r:#1F3A8A"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#heart"/></svg></div>
+          <div><h3>Lembrancinha no saquinho</h3><p>Biscoitos embalados individualmente, com laço na cor da festa. Chega pronta para entregar aos convidados.</p></div>
+          <a class="btn ghost pick" href="#pedido" data-kind="Lembrancinha no saquinho">Pedir este</a>
+        </article>
+        <article class="row">
+          <div class="media" data-photo="" data-alt="Pote de presente com biscoitos" style="--bg:#EFE6F7;--r:#8F6BC2"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#jar"/></svg></div>
+          <div><h3>Pote para presentear</h3><p>Biscoitinhos num pote transparente fechado com laço de cetim. Um presente bonito para datas especiais.</p></div>
+          <a class="btn ghost pick" href="#pedido" data-kind="Pote para presente">Pedir este</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><h2>Como pedir</h2></div>
+      <ol class="steps">
+        <li><h3>Mande a data</h3><p>Conte a data do evento e a quantidade que você precisa.</p></li>
+        <li><h3>Personalize</h3><p>Escolha o nome, a logo ou a frase e a cor do laço.</p></li>
+        <li><h3>Confirme</h3><p>Receba o orçamento e confirme o seu pedido pelo WhatsApp.</p></li>
+        <li><h3>Receba</h3><p>Combine a retirada ou a entrega e aproveite a festa.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="order" id="pedido">
+    <div class="wrap">
+      <div class="head" style="margin:0">
+        <h2>Peça pelo WhatsApp</h2>
+        <p>Preencha os campos e abrimos a conversa com o seu pedido pronto. Você ainda pode ajustar tudo antes de enviar.</p>
+      </div>
+      <form id="form">
+        <label>Seu nome<input name="nome" required autocomplete="name" placeholder="Maria Silva"></label>
+        <label>Ocasião
+          <select name="ocasiao">
+            <option>Casamento</option><option>Chá de bebê</option><option>Aniversário</option>
+            <option>Dia dos Pais</option><option>Noivado</option><option>Formatura</option><option>Outra</option>
+          </select>
+        </label>
+        <label>O que você quer
+          <select name="tipo" id="tipo">
+            <option>Biscoito com marca</option><option>Lembrancinha no saquinho</option><option>Pote para presente</option><option>Ainda não sei</option>
+          </select>
+        </label>
+        <label>Quantidade<input name="qtd" type="number" min="1" inputmode="numeric" placeholder="50"></label>
+        <label>Data do evento<input name="data" type="date"></label>
+        <div class="full">
+          <label style="margin-bottom:.35rem">Cor do laço</label>
+          <div class="ribchip"><i></i><span id="ribChip">Rosa</span><a href="#topo">trocar</a></div>
+        </div>
+        <label class="full">Nome, frase ou logo no biscoito<textarea name="obs" rows="3" placeholder="Ex.: “Ana & Bruno”, ou diga que vai enviar a logo"></textarea></label>
+        <button class="btn full" type="submit">Enviar pedido no WhatsApp</button>
+        <p class="note full">Ao clicar, você vai para o WhatsApp com a mensagem preenchida. Nada é enviado antes disso.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <div class="wrap faq">
+      <div class="head"><h2>Dúvidas comuns</h2></div>
+      <details><summary>Com quanto tempo de antecedência devo pedir?</summary><p>Quanto antes, melhor, porque a agenda de datas enche rápido. Mande a data do evento pelo WhatsApp e confirmamos se ainda há vaga.</p></details>
+      <details><summary>Posso colocar minha logo ou meu nome no biscoito?</summary><p>Sim. Nome, frase ou logo ficam gravados na massa. Se for logo, envie a imagem na conversa para avaliarmos o desenho.</p></details>
+      <details><summary>Qual é a quantidade mínima?</summary><p>Atendemos desde presentes pequenos até lembrancinhas para festas grandes. Diga a quantidade que você precisa e passamos o valor.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo">Monalisa Melo</span><p>Biscoitinhos amanteigados feitos à mão.</p></div>
+    <div class="links">
+      <a href="https://www.instagram.com/monalisamelo.caseirinhos/" target="_blank" rel="noopener">Instagram @monalisamelo.caseirinhos</a>
+      <a href="#pedido">Pedir pelo WhatsApp</a>
+    </div>
+    <small>© <span id="ano"></span> Monalisa Melo Caseirinhos. Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
